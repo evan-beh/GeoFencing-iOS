@@ -25,8 +25,6 @@ public class CustomMapAnnotation:NSObject, MKAnnotation {
 
 
   }
-    
-
  
   public var subtitle: String? {
     return self.object?.name
@@ -43,3 +41,34 @@ public class CustomMapAnnotation:NSObject, MKAnnotation {
   }
 
 }
+
+
+class StationCMAnnotation: CustomMapAnnotation {
+    
+    init(object:StationObjectModel) {
+
+        super.init(object: object)
+        self.imageName = "ic_station"
+
+
+
+  }
+
+}
+
+
+
+
+class UserCMAnnotation: CustomMapAnnotation {
+    
+    init(object:UserObjectModel) {
+
+        super.init(object: object)
+        self.imageName = "ic_user"
+
+
+
+  }
+
+}
+

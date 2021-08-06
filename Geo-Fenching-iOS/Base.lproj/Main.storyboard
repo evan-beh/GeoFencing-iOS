@@ -19,6 +19,17 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Kej-IJ-sVH">
                                 <rect key="frame" x="0.0" y="44" width="414" height="569"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOj-K5-HiT">
+                                <rect key="frame" x="10" y="54" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="U3G-xv-Nio"/>
+                                    <constraint firstAttribute="width" constant="40" id="gJ0-Jd-Emn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btnCurrentLocationClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ugn-6t-clQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -26,7 +37,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kej-IJ-sVH" secondAttribute="trailing" id="0jZ-am-vxZ"/>
                             <constraint firstItem="Kej-IJ-sVH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="29Q-Kp-gF0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kej-IJ-sVH" secondAttribute="bottom" constant="200" id="Iwd-IP-CFt"/>
+                            <constraint firstItem="xOj-K5-HiT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="QFA-u2-16g"/>
                             <constraint firstItem="Kej-IJ-sVH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qpa-Eq-64J"/>
+                            <constraint firstItem="xOj-K5-HiT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="dh3-XO-XXL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZDj-Jh-Hpv"/>

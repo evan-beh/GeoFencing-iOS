@@ -14,6 +14,13 @@ class ViewController: UIViewController {
     let viewModel = ViewModel()
     
     
+    @IBAction func btnCurrentLocationClicked(_ sender: Any) {
+        
+        let viewRegion = MKCoordinateRegion(center: self.viewModel.currentLocation!.coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
+                           self.ibMapView.setRegion(viewRegion, animated: false)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,16 +38,20 @@ class ViewController: UIViewController {
         
         viewModel.startLocationEngine()
 
-//        viewModel.fetchStationAnnotationcomplete { arrayAnnotations, error in
-//
-//            self.ibMapView.addAnnotations(arrayAnnotations)
-//
-//        }
+        viewModel.fetchStationAnnotation { arrayAnnotations, error in
+
+            self.ibMapView.addAnnotations(arrayAnnotations)
+
+        }
         
+        viewModel.getUserAnnotation { userAnnotations, error in
+            
+            let userAnnotation = userAnnotations[0]
+                self.ibMapView.addAnnotation(userAnnotation)
+
+            
+        }
         
-        let station3 = StationObjectModel(title: "Station A", name: "TTDI", coordinate: CLLocationCoordinate2DMake(3.1420962, 101.6232076))
-        
-        self.ibMapView.addAnnotations([StationCMAnnotation(object: station3)])
 
     }
     

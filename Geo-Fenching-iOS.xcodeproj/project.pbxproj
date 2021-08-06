@@ -23,7 +23,6 @@
 		F91A21FD26BD1CD400F3DDD4 /* StationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91A21FC26BD1CD400F3DDD4 /* StationService.swift */; };
 		F91A21FF26BD217B00F3DDD4 /* ObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91A21FE26BD217B00F3DDD4 /* ObjectModel.swift */; };
 		F91A220126BD21EA00F3DDD4 /* StationObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91A220026BD21EA00F3DDD4 /* StationObjectModel.swift */; };
-		F91A220326BD270E00F3DDD4 /* StationCMAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91A220226BD270E00F3DDD4 /* StationCMAnnotation.swift */; };
 		F91A220626BD313000F3DDD4 /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F91A220526BD313000F3DDD4 /* Location.gpx */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +66,6 @@
 		F91A21FC26BD1CD400F3DDD4 /* StationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationService.swift; sourceTree = "<group>"; };
 		F91A21FE26BD217B00F3DDD4 /* ObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectModel.swift; sourceTree = "<group>"; };
 		F91A220026BD21EA00F3DDD4 /* StationObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationObjectModel.swift; sourceTree = "<group>"; };
-		F91A220226BD270E00F3DDD4 /* StationCMAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCMAnnotation.swift; sourceTree = "<group>"; };
 		F91A220526BD313000F3DDD4 /* Location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				F91A21F126BD01BB00F3DDD4 /* CustomMapAnnotation.swift */,
-				F91A220226BD270E00F3DDD4 /* StationCMAnnotation.swift */,
 				F91A21F626BD087D00F3DDD4 /* CustomMapAnnotationView.swift */,
 			);
 			path = MapView;
@@ -318,7 +315,6 @@
 				F91A21BF26BCFB4700F3DDD4 /* AppDelegate.swift in Sources */,
 				F91A21FD26BD1CD400F3DDD4 /* StationService.swift in Sources */,
 				F91A21C126BCFB4700F3DDD4 /* SceneDelegate.swift in Sources */,
-				F91A220326BD270E00F3DDD4 /* StationCMAnnotation.swift in Sources */,
 				F91A21F226BD01BB00F3DDD4 /* CustomMapAnnotation.swift in Sources */,
 				F91A220126BD21EA00F3DDD4 /* StationObjectModel.swift in Sources */,
 				F91A21FF26BD217B00F3DDD4 /* ObjectModel.swift in Sources */,

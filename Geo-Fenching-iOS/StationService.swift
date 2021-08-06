@@ -18,17 +18,14 @@ protocol StationServiceProtocol
 class StationService: NSObject,StationServiceProtocol {
     func fetchStations(complete: ([StationObjectModel], NSError?) -> ()) {
         
+                
+        let station1 = StationObjectModel(title: "PETROL STAION", name: "JAYA ONE", coordinate: CLLocationCoordinate2DMake(3.1289662, 101.6141438))
         
-//        let user = UserObjectModel(title: "this is a Setel user", name: "Jason", coordinate: CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0), wifi: "")
-        
-        let station1 = StationObjectModel(title: "Station A", name: "TTDI", coordinate: CLLocationCoordinate2D(latitude: 0,longitude: 0))
-        
-        
-        let station2 = StationObjectModel(title: "Station A", name: "TTDI", coordinate: CLLocationCoordinate2D(latitude: 0,longitude: 0))
+        let station2 = StationObjectModel(title: "PETROL STAION", name: "PETRONAS Damansara Jaya 2 (Petronas)", coordinate: CLLocationCoordinate2DMake(3.1869496, 101.4961652))
         
         
-        let station3 = StationObjectModel(title: "Station A", name: "TTDI", coordinate: CLLocationCoordinate2D(latitude: 0,longitude: 0))
-        
+
+        let station3 = StationObjectModel(title: "PETROL STAION", name: "Petronas SS 4B", coordinate: CLLocationCoordinate2DMake(3.1783373, 101.4884648))
         
         complete([station1,station2,station3], nil)
         

@@ -22,9 +22,11 @@ class LocationService:NSObject, LocationServiceProtocol,CLLocationManagerDelegat
   
  
     var locationManager: CLLocationManager!
-    var currentLocation: CLLocation?
+    public var currentLocation: CLLocation?
     public var completeLoadLocation: ((CLLocation, NSError?) -> ())!
 
+ 
+    
     func setup()
     {
         
