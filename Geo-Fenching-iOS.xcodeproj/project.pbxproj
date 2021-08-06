@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F91A21BF26BCFB4700F3DDD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91A21BE26BCFB4700F3DDD4 /* AppDelegate.swift */; };
+		F91A21C126BCFB4700F3DDD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91A21C026BCFB4700F3DDD4 /* SceneDelegate.swift */; };
+		F91A21C326BCFB4700F3DDD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91A21C226BCFB4700F3DDD4 /* ViewController.swift */; };
+		F91A21C626BCFB4700F3DDD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91A21C426BCFB4700F3DDD4 /* Main.storyboard */; };
+		F91A21C826BCFB4900F3DDD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F91A21C726BCFB4900F3DDD4 /* Assets.xcassets */; };
+		F91A21CB26BCFB4900F3DDD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F91A21C926BCFB4900F3DDD4 /* LaunchScreen.storyboard */; };
+		F91A21D626BCFB4900F3DDD4 /* Geo_Fenching_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91A21D526BCFB4900F3DDD4 /* Geo_Fenching_iOSTests.swift */; };
+		F91A21E126BCFB4900F3DDD4 /* Geo_Fenching_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91A21E026BCFB4900F3DDD4 /* Geo_Fenching_iOSUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F91A21D226BCFB4900F3DDD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F91A21B326BCFB4700F3DDD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F91A21BA26BCFB4700F3DDD4;
+			remoteInfo = "Geo-Fenching-iOS";
+		};
+		F91A21DD26BCFB4900F3DDD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F91A21B326BCFB4700F3DDD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F91A21BA26BCFB4700F3DDD4;
+			remoteInfo = "Geo-Fenching-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F91A21BB26BCFB4700F3DDD4 /* Geo-Fenching-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Geo-Fenching-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F91A21BE26BCFB4700F3DDD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F91A21C026BCFB4700F3DDD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F91A21C226BCFB4700F3DDD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F91A21C526BCFB4700F3DDD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F91A21C726BCFB4900F3DDD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F91A21CA26BCFB4900F3DDD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F91A21CC26BCFB4900F3DDD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F91A21D126BCFB4900F3DDD4 /* Geo-Fenching-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Geo-Fenching-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F91A21D526BCFB4900F3DDD4 /* Geo_Fenching_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geo_Fenching_iOSTests.swift; sourceTree = "<group>"; };
+		F91A21D726BCFB4900F3DDD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F91A21DC26BCFB4900F3DDD4 /* Geo-Fenching-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Geo-Fenching-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F91A21E026BCFB4900F3DDD4 /* Geo_Fenching_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geo_Fenching_iOSUITests.swift; sourceTree = "<group>"; };
+		F91A21E226BCFB4900F3DDD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F91A21B826BCFB4700F3DDD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F91A21CE26BCFB4900F3DDD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F91A21D926BCFB4900F3DDD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F91A21B226BCFB4700F3DDD4 = {
+			isa = PBXGroup;
+			children = (
+				F91A21BD26BCFB4700F3DDD4 /* Geo-Fenching-iOS */,
+				F91A21D426BCFB4900F3DDD4 /* Geo-Fenching-iOSTests */,
+				F91A21DF26BCFB4900F3DDD4 /* Geo-Fenching-iOSUITests */,
+				F91A21BC26BCFB4700F3DDD4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F91A21BC26BCFB4700F3DDD4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F91A21BB26BCFB4700F3DDD4 /* Geo-Fenching-iOS.app */,
+				F91A21D126BCFB4900F3DDD4 /* Geo-Fenching-iOSTests.xctest */,
+				F91A21DC26BCFB4900F3DDD4 /* Geo-Fenching-iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F91A21BD26BCFB4700F3DDD4 /* Geo-Fenching-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F91A21BE26BCFB4700F3DDD4 /* AppDelegate.swift */,
+				F91A21C026BCFB4700F3DDD4 /* SceneDelegate.swift */,
+				F91A21C226BCFB4700F3DDD4 /* ViewController.swift */,
+				F91A21C426BCFB4700F3DDD4 /* Main.storyboard */,
+				F91A21C726BCFB4900F3DDD4 /* Assets.xcassets */,
+				F91A21C926BCFB4900F3DDD4 /* LaunchScreen.storyboard */,
+				F91A21CC26BCFB4900F3DDD4 /* Info.plist */,
+			);
+			path = "Geo-Fenching-iOS";
+			sourceTree = "<group>";
+		};
+		F91A21D426BCFB4900F3DDD4 /* Geo-Fenching-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				F91A21D526BCFB4900F3DDD4 /* Geo_Fenching_iOSTests.swift */,
+				F91A21D726BCFB4900F3DDD4 /* Info.plist */,
+			);
+			path = "Geo-Fenching-iOSTests";
+			sourceTree = "<group>";
+		};
+		F91A21DF26BCFB4900F3DDD4 /* Geo-Fenching-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F91A21E026BCFB4900F3DDD4 /* Geo_Fenching_iOSUITests.swift */,
+				F91A21E226BCFB4900F3DDD4 /* Info.plist */,
+			);
+			path = "Geo-Fenching-iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F91A21BA26BCFB4700F3DDD4 /* Geo-Fenching-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F91A21E526BCFB4900F3DDD4 /* Build configuration list for PBXNativeTarget "Geo-Fenching-iOS" */;
+			buildPhases = (
+				F91A21B726BCFB4700F3DDD4 /* Sources */,
+				F91A21B826BCFB4700F3DDD4 /* Frameworks */,
+				F91A21B926BCFB4700F3DDD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Geo-Fenching-iOS";
+			productName = "Geo-Fenching-iOS";
+			productReference = F91A21BB26BCFB4700F3DDD4 /* Geo-Fenching-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F91A21D026BCFB4900F3DDD4 /* Geo-Fenching-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F91A21E826BCFB4900F3DDD4 /* Build configuration list for PBXNativeTarget "Geo-Fenching-iOSTests" */;
+			buildPhases = (
+				F91A21CD26BCFB4900F3DDD4 /* Sources */,
+				F91A21CE26BCFB4900F3DDD4 /* Frameworks */,
+				F91A21CF26BCFB4900F3DDD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F91A21D326BCFB4900F3DDD4 /* PBXTargetDependency */,
+			);
+			name = "Geo-Fenching-iOSTests";
+			productName = "Geo-Fenching-iOSTests";
+			productReference = F91A21D126BCFB4900F3DDD4 /* Geo-Fenching-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F91A21DB26BCFB4900F3DDD4 /* Geo-Fenching-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F91A21EB26BCFB4900F3DDD4 /* Build configuration list for PBXNativeTarget "Geo-Fenching-iOSUITests" */;
+			buildPhases = (
+				F91A21D826BCFB4900F3DDD4 /* Sources */,
+				F91A21D926BCFB4900F3DDD4 /* Frameworks */,
+				F91A21DA26BCFB4900F3DDD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F91A21DE26BCFB4900F3DDD4 /* PBXTargetDependency */,
+			);
+			name = "Geo-Fenching-iOSUITests";
+			productName = "Geo-Fenching-iOSUITests";
+			productReference = F91A21DC26BCFB4900F3DDD4 /* Geo-Fenching-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F91A21B326BCFB4700F3DDD4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					F91A21BA26BCFB4700F3DDD4 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					F91A21D026BCFB4900F3DDD4 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = F91A21BA26BCFB4700F3DDD4;
+					};
+					F91A21DB26BCFB4900F3DDD4 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = F91A21BA26BCFB4700F3DDD4;
+					};
+				};
+			};
+			buildConfigurationList = F91A21B626BCFB4700F3DDD4 /* Build configuration list for PBXProject "Geo-Fenching-iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F91A21B226BCFB4700F3DDD4;
+			productRefGroup = F91A21BC26BCFB4700F3DDD4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F91A21BA26BCFB4700F3DDD4 /* Geo-Fenching-iOS */,
+				F91A21D026BCFB4900F3DDD4 /* Geo-Fenching-iOSTests */,
+				F91A21DB26BCFB4900F3DDD4 /* Geo-Fenching-iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F91A21B926BCFB4700F3DDD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F91A21CB26BCFB4900F3DDD4 /* LaunchScreen.storyboard in Resources */,
+				F91A21C826BCFB4900F3DDD4 /* Assets.xcassets in Resources */,
+				F91A21C626BCFB4700F3DDD4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F91A21CF26BCFB4900F3DDD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F91A21DA26BCFB4900F3DDD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F91A21B726BCFB4700F3DDD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F91A21C326BCFB4700F3DDD4 /* ViewController.swift in Sources */,
+				F91A21BF26BCFB4700F3DDD4 /* AppDelegate.swift in Sources */,
+				F91A21C126BCFB4700F3DDD4 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F91A21CD26BCFB4900F3DDD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F91A21D626BCFB4900F3DDD4 /* Geo_Fenching_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F91A21D826BCFB4900F3DDD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F91A21E126BCFB4900F3DDD4 /* Geo_Fenching_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F91A21D326BCFB4900F3DDD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F91A21BA26BCFB4700F3DDD4 /* Geo-Fenching-iOS */;
+			targetProxy = F91A21D226BCFB4900F3DDD4 /* PBXContainerItemProxy */;
+		};
+		F91A21DE26BCFB4900F3DDD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F91A21BA26BCFB4700F3DDD4 /* Geo-Fenching-iOS */;
+			targetProxy = F91A21DD26BCFB4900F3DDD4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F91A21C426BCFB4700F3DDD4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F91A21C526BCFB4700F3DDD4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F91A21C926BCFB4900F3DDD4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F91A21CA26BCFB4900F3DDD4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F91A21E326BCFB4900F3DDD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F91A21E426BCFB4900F3DDD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F91A21E626BCFB4900F3DDD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XC3V56QZ6D;
+				INFOPLIST_FILE = "Geo-Fenching-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.geofench.my.Geo-Fenching-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F91A21E726BCFB4900F3DDD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XC3V56QZ6D;
+				INFOPLIST_FILE = "Geo-Fenching-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.geofench.my.Geo-Fenching-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F91A21E926BCFB4900F3DDD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XC3V56QZ6D;
+				INFOPLIST_FILE = "Geo-Fenching-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.geofench.my.Geo-Fenching-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Geo-Fenching-iOS.app/Geo-Fenching-iOS";
+			};
+			name = Debug;
+		};
+		F91A21EA26BCFB4900F3DDD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XC3V56QZ6D;
+				INFOPLIST_FILE = "Geo-Fenching-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.geofench.my.Geo-Fenching-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Geo-Fenching-iOS.app/Geo-Fenching-iOS";
+			};
+			name = Release;
+		};
+		F91A21EC26BCFB4900F3DDD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XC3V56QZ6D;
+				INFOPLIST_FILE = "Geo-Fenching-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.geofench.my.Geo-Fenching-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Geo-Fenching-iOS";
+			};
+			name = Debug;
+		};
+		F91A21ED26BCFB4900F3DDD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XC3V56QZ6D;
+				INFOPLIST_FILE = "Geo-Fenching-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.geofench.my.Geo-Fenching-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Geo-Fenching-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F91A21B626BCFB4700F3DDD4 /* Build configuration list for PBXProject "Geo-Fenching-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F91A21E326BCFB4900F3DDD4 /* Debug */,
+				F91A21E426BCFB4900F3DDD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F91A21E526BCFB4900F3DDD4 /* Build configuration list for PBXNativeTarget "Geo-Fenching-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F91A21E626BCFB4900F3DDD4 /* Debug */,
+				F91A21E726BCFB4900F3DDD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F91A21E826BCFB4900F3DDD4 /* Build configuration list for PBXNativeTarget "Geo-Fenching-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F91A21E926BCFB4900F3DDD4 /* Debug */,
+				F91A21EA26BCFB4900F3DDD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F91A21EB26BCFB4900F3DDD4 /* Build configuration list for PBXNativeTarget "Geo-Fenching-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F91A21EC26BCFB4900F3DDD4 /* Debug */,
+				F91A21ED26BCFB4900F3DDD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F91A21B326BCFB4700F3DDD4 /* Project object */;
+}
