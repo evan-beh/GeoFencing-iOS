@@ -10,22 +10,52 @@ import MapKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var ibMapView: MKMapView!
-  
+    @IBOutlet weak var ibDisplayView: UIView!
+    @IBOutlet weak var btnGoto: UIButton!
+    
     let viewModel = ViewModel()
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblDesc: UILabel!
     
     
     @IBAction func btnCurrentLocationClicked(_ sender: Any) {
         
-        let viewRegion = MKCoordinateRegion(center: self.viewModel.currentLocation!.coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
-                           self.ibMapView.setRegion(viewRegion, animated: false)
+        if let location = self.viewModel.currentLocation
+        {
+            let viewRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
+                               self.ibMapView.setRegion(viewRegion, animated: true)
+        }
+      
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.ibDisplayView.setRoundBorder()
+        
+        self.ibDisplayView.setShadow()
+     
+        self.btnGoto.layer.cornerRadius = 5.0
+
         setupMap()
         
+        setupViewModel()
+        
+        setupData()
+
+    }
+    
+    func setupData()
+    {
+        self.lblTitle.text = "NEAREST STATION 100 M"
+        self.lblDesc.text = "PETRONAS TTDI"
+        
+    }
+    
+    
+    func setupViewModel()
+    {
         viewModel.locationDidRefresh = { [weak self] (loc,error) in
            DispatchQueue.main.async {
             
@@ -51,8 +81,6 @@ class ViewController: UIViewController {
 
             
         }
-        
-
     }
     
     
@@ -65,7 +93,7 @@ extension ViewController: MKMapViewDelegate {
                calloutAccessoryControlTapped control: UIControl) {
     let location = view.annotation as! CustomMapAnnotation
     let launchOptions = [MKLaunchOptionsDirectionsModeKey:
-      MKLaunchOptionsDirectionsModeDriving]
+                            MKLaunchOptionsDirectionsModeDefault]
     location.mapItem().openInMaps(launchOptions: launchOptions)
   }
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {

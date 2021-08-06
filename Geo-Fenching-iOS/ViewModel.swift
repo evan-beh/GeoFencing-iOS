@@ -72,7 +72,7 @@ class ViewModel: NSObject {
     {
         
         self.locationService.fetchCurrentLocation { loc, error in
-//            self.locationDidRefresh(loc,error)
+            self.locationDidRefresh(loc,error)
             
             self.currentLocation = loc
             let user = UserObjectModel(title: "User", name: "John Doe", coordinate:loc.coordinate, wifi: "SSID123")
