@@ -24,7 +24,7 @@ class StationService: NSObject,StationServiceProtocol {
         let station2 = StationObjectModel(title: "PETROL STAION", name: "SinChew Daily", coordinate: CLLocationCoordinate2DMake(3.1173352, 101.628239), wifi: "222222")
         
         
-        let station3 = StationObjectModel(title: "PETROL STAION", name: "Petronas SS 4B", coordinate: CLLocationCoordinate2DMake(3.1080823, 101.6045678), wifi: "333333")
+        let station3 = StationObjectModel(title: "PETROL STAION", name: "Petronas SS 4B", coordinate: CLLocationCoordinate2DMake(3.1080823, 101.6045678), wifi: "123456")
         
         complete([station1,station2,station3], nil)
         

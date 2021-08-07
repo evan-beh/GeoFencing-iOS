@@ -82,7 +82,7 @@ class ViewController: UIViewController {
                              
                 self.lblAlert.text = combineText
                 
-                self.viewModel.enablePump = value.0 && value.1
+                self.viewModel.enablePump = value.0 || value.1
             }
             else{
                 self.lblTitle.text = "NEAREST STATION - M"
