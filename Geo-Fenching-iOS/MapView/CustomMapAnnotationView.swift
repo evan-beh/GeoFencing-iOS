@@ -19,7 +19,7 @@ class CustomAnnotationView: MKAnnotationView {
       canShowCallout = true
       calloutOffset = CGPoint(x: -5, y: 5)
       let mapsButton = UIButton(frame: CGRect(origin: CGPoint.zero,
-        size: CGSize(width: 30, height: 30)))
+        size: CGSize(width: 130, height: 130)))
       rightCalloutAccessoryView = mapsButton
 
       if let imageName = station.imageName {

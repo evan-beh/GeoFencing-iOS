@@ -16,15 +16,14 @@ class ViewController: UIViewController {
     let viewModel = ViewModel()
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDesc: UILabel!
+    @IBOutlet weak var lblAlert: UILabel!
     
     
     @IBAction func btnCurrentLocationClicked(_ sender: Any) {
         
-        if let location = self.viewModel.currentLocation
-        {
-            let viewRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
-                               self.ibMapView.setRegion(viewRegion, animated: true)
-        }
+        
+        self.viewModel.fetchCurrentLocation()
+
       
     }
     
@@ -50,20 +49,39 @@ class ViewController: UIViewController {
     {
         self.lblTitle.text = "NEAREST STATION 100 M"
         self.lblDesc.text = "PETRONAS TTDI"
+        self.lblAlert.text = "You are on in the proximity but"
         
     }
-    
+    func refreshUserLocation()
+    {
+        let region = CLCircularRegion(center: (self.viewModel.userAnnotation!.object?.coordinate)!, radius: self.viewModel.constRadius, identifier: "geofence")
+        self.ibMapView.removeOverlays(self.ibMapView.overlays)
+        let circle = MKCircle(center: (self.viewModel.userAnnotation!.object?.coordinate)!, radius: region.radius)
+        self.ibMapView.addOverlay(circle)
+        
+        self.ibMapView.addAnnotation(self.viewModel.userAnnotation!)
+    }
     
     func setupViewModel()
     {
-        viewModel.locationDidRefresh = { [weak self] (loc,error) in
+        self.viewModel.locationDidRefresh = {(loc,error) in
            DispatchQueue.main.async {
             
+            if let  currentAnnotation = self.viewModel.userAnnotation
+            {
+                self.ibMapView.removeAnnotation(currentAnnotation)
+
+            }
+            self.viewModel.getUserAnnotation { userAnnotation, error in
+              
+                self.refreshUserLocation()
+                
+            }
+           
             let viewRegion = MKCoordinateRegion(center: loc.coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
                               
-            self?.ibMapView.setRegion(viewRegion, animated: false)
+            self.ibMapView.setRegion(viewRegion, animated: false)
            }
-             
         }
         
         viewModel.startLocationEngine()
@@ -74,13 +92,7 @@ class ViewController: UIViewController {
 
         }
         
-        viewModel.getUserAnnotation { userAnnotations, error in
-            
-            let userAnnotation = userAnnotations[0]
-                self.ibMapView.addAnnotation(userAnnotation)
-
-            
-        }
+      
     }
     
     

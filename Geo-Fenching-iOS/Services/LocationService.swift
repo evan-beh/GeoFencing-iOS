@@ -43,7 +43,14 @@ class LocationService:NSObject, LocationServiceProtocol,CLLocationManagerDelegat
     }
     
     func fetchCurrentLocation(complete: @escaping (CLLocation, NSError?) -> ()) {
+        locationManager.startUpdatingLocation()
         completeLoadLocation = complete
+
+        if self.currentLocation != nil{
+            
+            completeLoadLocation(self.currentLocation!,nil)
+
+        }
     }
   
     
@@ -60,6 +67,7 @@ class LocationService:NSObject, LocationServiceProtocol,CLLocationManagerDelegat
 
              }
          }
+        
      }
     
     

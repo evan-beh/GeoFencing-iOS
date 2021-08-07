@@ -10,14 +10,10 @@ import MapKit
 
 
 class UserObjectModel:ObjectModel{
-  
-    var wifiSSID:String?
-    
+      
     init(title:String, name:String, coordinate:CLLocationCoordinate2D, wifi:String)
     {
-        super.init(title: title, name: name, coordinate: coordinate, type: ObjectType.user)
-        
-        self.wifiSSID = wifi
+        super.init(title: title, name: name, coordinate: coordinate, type: ObjectType.user, wifi: wifi)
     }
     
 

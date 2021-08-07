@@ -7,22 +7,38 @@
 
 import UIKit
 import CoreLocation
+import SystemConfiguration.CaptiveNetwork
 
 class ViewModel: NSObject {
 
+    let constRadius:Double = 500
+
     var petrolStations: [StationObjectModel]!
+    var userInfoObject: ObjectModel?
+    
+    var userAnnotation: UserCMAnnotation?
+
     public var currentLocation: CLLocation?
+    
+    
 
     public var locationDidRefresh: ((CLLocation, NSError?) -> ())!
 
     let locationService: LocationServiceProtocol
     let stationService: StationServiceProtocol
+    let wifiService: WiFIInfoServiceProtocol
+    let userInfoServices: UserInfoServices
 
 
-    init(locationService: LocationServiceProtocol = LocationService(), stationService:StationServiceProtocol = StationService() ) {
+    init(locationService: LocationServiceProtocol = LocationService(),
+         stationService:StationServiceProtocol = StationService(),
+         wifiService:WiFIInfoServiceProtocol = MockWifiInfoService(),
+         userInfoServices:UserInfoServices = UserInfoServices()) {
         
         self.locationService = locationService
         self.stationService = stationService
+        self.wifiService = wifiService
+        self.userInfoServices = userInfoServices
 
 
     }
@@ -31,13 +47,19 @@ class ViewModel: NSObject {
     func startLocationEngine()
     {
         self.locationService.setup()
+        fetchCurrentLocation()
+        
+
+    }
+    
+    func fetchCurrentLocation()
+    {
         self.locationService.fetchCurrentLocation { loc, error in
             
             self.currentLocation = loc
             self.locationDidRefresh(loc,error)
         }
         
-
     }
     
     func fetchStationData()
@@ -68,29 +90,45 @@ class ViewModel: NSObject {
         }
     }
     
-    func getUserAnnotation(fetchComplete: @escaping ([UserCMAnnotation], NSError?) -> ())
+    func getUserAnnotation(fetchComplete: @escaping (UserCMAnnotation, NSError?) -> ())
     {
         
-        self.locationService.fetchCurrentLocation { loc, error in
-            self.locationDidRefresh(loc,error)
+        self.userInfoServices.fetchUserInfo { userInfo, error in
             
-            self.currentLocation = loc
-            let user = UserObjectModel(title: "User", name: "John Doe", coordinate:loc.coordinate, wifi: "SSID123")
+            // if error will need to handle seperately
+            let user = userInfo
+            user.coordinate = self.currentLocation?.coordinate
+            self.userInfoObject = user
             let object = UserCMAnnotation(object: user)
-            
-            fetchComplete([object], nil)
-            
-        }
-        
-        
-       
+            self.userAnnotation = object
+            fetchComplete(object, nil)
 
+        }
         
     }
     
-
-
+ 
+  
+}
+//Validation of user and station distance
+extension ViewModel
+{
     
+    func validateInRangeAndWifi(station:StationObjectModel, user:UserObjectModel) -> (Bool,Bool)
+    {
+        
+        let userWifiSSID = self.wifiService.getWiFiSsid()
+        
+        let userLocation = CLLocation.init(latitude: self.currentLocation!.coordinate.latitude, longitude: self.currentLocation!.coordinate.longitude)
 
+        let petrolLocation = CLLocation.init(latitude: (station.coordinate!.latitude), longitude: (station.coordinate!.longitude))
+              
+        let distance =  petrolLocation.distance(from: userLocation)
+              
+        return (distance <= constRadius, station.wifiSSID == userWifiSSID)
+
+        
+                
+    }
 }
 

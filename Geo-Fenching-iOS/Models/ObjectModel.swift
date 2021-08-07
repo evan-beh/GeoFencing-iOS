@@ -24,8 +24,9 @@ class ObjectModel:NSObject{
     
     var coordinate: CLLocationCoordinate2D?
         
-   
-    init(title:String, name:String, coordinate:CLLocationCoordinate2D, type:ObjectType)
+    var wifiSSID:String?
+
+    init(title:String, name:String, coordinate:CLLocationCoordinate2D, type:ObjectType, wifi: String)
     {
         
         self.title = title;
@@ -35,6 +36,8 @@ class ObjectModel:NSObject{
         self.coordinate = coordinate
         
         self.type = type
+        
+        self.wifiSSID = wifi
         
     }
     
