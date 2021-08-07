@@ -25,6 +25,9 @@ class ObjectModel:NSObject{
     var coordinate: CLLocationCoordinate2D?
         
     var wifiSSID:String?
+    
+    var distance:Double = 0
+
 
     init(title:String, name:String, coordinate:CLLocationCoordinate2D, type:ObjectType, wifi: String)
     {

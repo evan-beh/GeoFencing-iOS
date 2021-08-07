@@ -17,17 +17,16 @@ protocol StationServiceProtocol
 
 class StationService: NSObject,StationServiceProtocol {
     func fetchStations(complete: ([StationObjectModel], NSError?) -> ()) {
+
         
-                
-        let station1 = StationObjectModel(title: "PETROL STAION", name: "JAYA ONE", coordinate: CLLocationCoordinate2DMake(3.1289662, 101.6141438), wifi: "123456")
+        let station1 = StationObjectModel(title: "PETROL STAION", name: "COLUMBIA", coordinate: CLLocationCoordinate2DMake(3.1182974, 101.6352253), wifi: "123456")
+
+        let station2 = StationObjectModel(title: "PETROL STAION", name: "SinChew Daily", coordinate: CLLocationCoordinate2DMake(3.1173352, 101.628239), wifi: "222222")
         
-        let station2 = StationObjectModel(title: "PETROL STAION", name: "PETRONAS Damansara Jaya 2 (Petronas)", coordinate: CLLocationCoordinate2DMake(3.1869496, 101.4961652), wifi: "222222")
         
-        
-        let station3 = StationObjectModel(title: "PETROL STAION", name: "Petronas SS 4B", coordinate: CLLocationCoordinate2DMake(3.1783373, 101.4884648), wifi: "333333")
+        let station3 = StationObjectModel(title: "PETROL STAION", name: "Petronas SS 4B", coordinate: CLLocationCoordinate2DMake(3.1080823, 101.6045678), wifi: "333333")
         
         complete([station1,station2,station3], nil)
-        
         
 
     }

@@ -44,18 +44,18 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufK-N0-Zrf">
-                                                <rect key="frame" x="16" y="114" width="366" height="48"/>
+                                                <rect key="frame" x="16" y="124" width="366" height="38"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <state key="normal" title="GO TO STATION">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dya-ug-mlL">
-                                                <rect key="frame" x="8" y="76" width="382" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dya-ug-mlL">
+                                                <rect key="frame" x="8" y="76" width="382" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="JVZ-LX-1Fc"/>
+                                                    <constraint firstAttribute="height" constant="40" id="JVZ-LX-1Fc"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>

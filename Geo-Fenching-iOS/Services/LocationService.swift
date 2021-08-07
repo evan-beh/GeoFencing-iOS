@@ -63,7 +63,7 @@ class LocationService:NSObject, LocationServiceProtocol,CLLocationManagerDelegat
              // Zoom to user location
              if let userLocation = locations.last {
                 
-                self.completeLoadLocation(userLocation,nil)
+                self.completeLoadLocation?(userLocation,nil)
 
              }
          }

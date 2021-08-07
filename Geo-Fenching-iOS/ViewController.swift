@@ -7,6 +7,9 @@
 
 import UIKit
 import MapKit
+import Combine
+import PromiseKit
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var ibMapView: MKMapView!
@@ -18,11 +21,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblDesc: UILabel!
     @IBOutlet weak var lblAlert: UILabel!
     
-    
+
     @IBAction func btnCurrentLocationClicked(_ sender: Any) {
         
         
-        self.viewModel.fetchCurrentLocation()
+        firstly {
+            self.viewModel.fetchCurrentLocation()
+
+        }.done { _ in
+            self.viewModel.getNearestStation()
+        }
 
       
     }
@@ -44,15 +52,52 @@ class ViewController: UIViewController {
         setupData()
 
     }
-    
+    private var cancellables: Set<AnyCancellable> = []
+
     func setupData()
     {
-        self.lblTitle.text = "NEAREST STATION 100 M"
-        self.lblDesc.text = "PETRONAS TTDI"
-        self.lblAlert.text = "You are on in the proximity but"
+
+        self.viewModel.updateUI = {
+            
+            self.btnGoto.setTitle(self.viewModel.enablePump ? "PUMP NOW!":"GOTO STATION!", for: .normal)
+
+        }
+
         
+        //Demo of obersable binding
+        self.viewModel.$nearestStation.sink { model in
+            
+            
+            let distance = (model?.distance ?? 0)/1000
+            self.lblTitle.text = String(format: "NEAREST STATION %.2f KM", distance)
+                
+            self.lblDesc.text = model?.name
+            
+            if let nearestStation = model, let user = self.viewModel.userInfoObject
+            {
+                let value  = self.viewModel.validateInRangeAndWifi(station: nearestStation, user: user as! UserObjectModel)
+                let proximityRange = value.0 ? "In":"NOT In"
+                let wifiRange = value.1 ? "connected" : "NOT connected"
+                let combineText = "You are \(proximityRange) Station Proximity & \(wifiRange) to Wifi"
+                             
+                self.lblAlert.text = combineText
+                
+                self.viewModel.enablePump = value.0 && value.1
+            }
+            else{
+                self.lblTitle.text = "NEAREST STATION - M"
+                self.lblDesc.text = "------"
+                self.lblAlert.text = "PROXIMITY ....."
+                self.viewModel.enablePump = false
+            }
+                              
+                 
+        }.store(in: &cancellables)
+            
+           
+       
     }
-    func refreshUserLocation()
+    func refreshUserAnnotation()
     {
         let region = CLCircularRegion(center: (self.viewModel.userAnnotation!.object?.coordinate)!, radius: self.viewModel.constRadius, identifier: "geofence")
         self.ibMapView.removeOverlays(self.ibMapView.overlays)
@@ -66,16 +111,12 @@ class ViewController: UIViewController {
     {
         self.viewModel.locationDidRefresh = {(loc,error) in
            DispatchQueue.main.async {
-            
             if let  currentAnnotation = self.viewModel.userAnnotation
             {
                 self.ibMapView.removeAnnotation(currentAnnotation)
-
             }
             self.viewModel.getUserAnnotation { userAnnotation, error in
-              
-                self.refreshUserLocation()
-                
+                self.refreshUserAnnotation()
             }
            
             let viewRegion = MKCoordinateRegion(center: loc.coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
@@ -84,15 +125,20 @@ class ViewController: UIViewController {
            }
         }
         
-        viewModel.startLocationEngine()
-
-        viewModel.fetchStationAnnotation { arrayAnnotations, error in
-
-            self.ibMapView.addAnnotations(arrayAnnotations)
-
-        }
         
-      
+        firstly {
+            self.viewModel.startLocationService()
+
+        }.then { _ in
+            self.viewModel.retreivePageData()
+        }.then { _ in
+            self.viewModel.fetchStationAnnotation()
+        }.then { tempArray in
+            self.addStationAnnotations(array: tempArray)
+        }.done { _ in
+            self.viewModel.getNearestStation()
+        }
+    
     }
     
     
@@ -100,6 +146,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: MKMapViewDelegate {
+
 
   func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
                calloutAccessoryControlTapped control: UIControl) {
@@ -129,8 +176,20 @@ extension ViewController {
                
 
        }
-       
-   
+    func addStationAnnotations(array:[StationCMAnnotation]) -> Promise<Any?>
+    {
+        let promise = Promise<Any?>
+        {seal in
+            
+            self.ibMapView.addAnnotations(array)
+            seal.fulfill(nil)
+
+        }
+        
+        return promise
+        
+    }
+    
 
 }
 
