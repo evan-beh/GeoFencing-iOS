@@ -15,9 +15,7 @@ class ViewModel: NSObject {
     @Published var nearestStation: StationObjectModel?
     
     var distanceFromUser:Double = 0
-
-    let constRadius:Double = 500
-
+  
     var petrolStations: [StationObjectModel]!
 
     var userInfoObject: ObjectModel?
@@ -274,7 +272,7 @@ extension ViewModel
               
         let distance =  petrolLocation.distance(from: userLocation)
               
-        let inRange = distance <= constRadius
+        let inRange = distance <= Constants.radius
         
         let connectedWifi = station.wifiSSID == userWifiSSID
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7188BB8A6B07061F913A6F31 /* Pods_Geo_Fenching_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4419B039D23F646A427E8FBE /* Pods_Geo_Fenching_iOSTests.framework */; };
 		BA9949809F93417B6D83D596 /* Pods_Geo_Fenching_iOS_Geo_Fenching_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EBD38CCCE025F1B9C7984 /* Pods_Geo_Fenching_iOS_Geo_Fenching_iOSUITests.framework */; };
+		F90BEA7B26BFC3FD006FF1CF /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90BEA7A26BFC3FD006FF1CF /* AppConfig.swift */; };
 		F91A21BF26BCFB4700F3DDD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91A21BE26BCFB4700F3DDD4 /* AppDelegate.swift */; };
 		F91A21C126BCFB4700F3DDD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91A21C026BCFB4700F3DDD4 /* SceneDelegate.swift */; };
 		F91A21C326BCFB4700F3DDD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91A21C226BCFB4700F3DDD4 /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 		C55E4FCD43E59E9BCD1CBC3B /* Pods_Geo_Fenching_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Geo_Fenching_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1108CE3BB55C5EA4460D2B4 /* Pods-Geo-Fenching-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geo-Fenching-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Geo-Fenching-iOSTests/Pods-Geo-Fenching-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E873972DA2217049CF3410EE /* Pods-Geo-Fenching-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Geo-Fenching-iOS.release.xcconfig"; path = "Target Support Files/Pods-Geo-Fenching-iOS/Pods-Geo-Fenching-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		F90BEA7A26BFC3FD006FF1CF /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		F91A21BB26BCFB4700F3DDD4 /* Geo-Fenching-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Geo-Fenching-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91A21BE26BCFB4700F3DDD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F91A21C026BCFB4700F3DDD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +87,7 @@
 		F91A220526BD313000F3DDD4 /* Location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		F94A858026BFA531002D352A /* MockLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationService.swift; sourceTree = "<group>"; };
 		F9E6FF1A26BD5B7600169283 /* WiFIInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFIInfoService.swift; sourceTree = "<group>"; };
-		F9E6FF1C26BD5D3800169283 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Models/UIView+Extension.swift"; sourceTree = "<group>"; };
+		F9E6FF1C26BD5D3800169283 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		F9E6FF1F26BD64E200169283 /* UserInfoServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F90BEA7826BFC3A2006FF1CF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F9E6FF1C26BD5D3800169283 /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F90BEA7926BFC3AB006FF1CF /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				F90BEA7A26BFC3FD006FF1CF /* AppConfig.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		F91A21B226BCFB4700F3DDD4 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +183,8 @@
 		F91A21BD26BCFB4700F3DDD4 /* Geo-Fenching-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F90BEA7926BFC3AB006FF1CF /* Constant */,
+				F90BEA7826BFC3A2006FF1CF /* Extension */,
 				F9E6FF1E26BD64C600169283 /* Services */,
 				F91A220426BD312000F3DDD4 /* Resources */,
 				F91A21F326BD03BC00F3DDD4 /* Models */,
@@ -177,7 +197,6 @@
 				F91A21C726BCFB4900F3DDD4 /* Assets.xcassets */,
 				F91A21C926BCFB4900F3DDD4 /* LaunchScreen.storyboard */,
 				F91A21CC26BCFB4900F3DDD4 /* Info.plist */,
-				F9E6FF1C26BD5D3800169283 /* UIView+Extension.swift */,
 			);
 			path = "Geo-Fenching-iOS";
 			sourceTree = "<group>";
@@ -479,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9E6FF1B26BD5B7600169283 /* WiFIInfoService.swift in Sources */,
+				F90BEA7B26BFC3FD006FF1CF /* AppConfig.swift in Sources */,
 				F9E6FF1D26BD5D3800169283 /* UIView+Extension.swift in Sources */,
 				F91A21C326BCFB4700F3DDD4 /* ViewController.swift in Sources */,
 				F91A21F726BD087D00F3DDD4 /* CustomMapAnnotationView.swift in Sources */,

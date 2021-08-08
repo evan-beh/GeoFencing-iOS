@@ -96,7 +96,7 @@ class ViewController: UIViewController {
     }
     func refreshUserAnnotation()
     {
-        let region = CLCircularRegion(center: (self.viewModel.userAnnotation!.object?.coordinate)!, radius: self.viewModel.constRadius, identifier: "geofence")
+        let region = CLCircularRegion(center: (self.viewModel.userAnnotation!.object?.coordinate)!, radius: Constants.radius, identifier: "geofence")
         self.ibMapView.removeOverlays(self.ibMapView.overlays)
         let circle = MKCircle(center: (self.viewModel.userAnnotation!.object?.coordinate)!, radius: region.radius)
         self.ibMapView.addOverlay(circle)
