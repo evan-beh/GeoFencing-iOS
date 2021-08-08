@@ -1,5 +1,6 @@
-# Geofence iOS
-This project is a demonstration of geofence with:
+## Geofence iOS
+##### This project is a demonstration of geofence with:
+
 1. MKMapView, CustomAnnotation
 2. Cocoapod
 3. Combine data binding
@@ -8,7 +9,7 @@ This project is a demonstration of geofence with:
 6. Unit Testing
 7. PromiseKit
 
-## FEATURES INCLUDED
+##### FEATURES INCLUDED
 1. MKMapView to display user and stations with callout details. And promixity range radius.
 2. You can make mock user location using gpx file or using MockLocationService in code.
 3. You can make mock user SSID using MockWifiInfoService.
