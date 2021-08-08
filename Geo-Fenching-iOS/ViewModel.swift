@@ -64,7 +64,8 @@ class ViewModel: NSObject {
 
     func startLocationService() -> Promise<Any?>
     {
-        
+        print ("===== [startLocationService] =====")
+
         let promise = Promise<Any?> {seal in
             
             self.locationService.setup()
@@ -77,15 +78,16 @@ class ViewModel: NSObject {
     
     func retreivePageData() -> Promise<Any?>
     {
-        
+        print ("===== [retreivePageData] =====")
+
         let promise = Promise<Any?> {seal in
             
-            self.fetchCurrentLocation()
-            self.fetchStationData()
-            self.fetchUserInfo()
-            
+            firstly {
+                when(fulfilled: self.fetchCurrentLocation(), self.fetchStationData(),self.fetchUserInfo())
+            }
             seal.fulfill(nil)
 
+            
         }
         
        return promise
@@ -95,6 +97,8 @@ class ViewModel: NSObject {
     
     func fetchCurrentLocation()  -> Promise<CLLocation>
     {
+        
+        print ("===== [fetchCurrentLocation] =====")
         let promise = Promise<CLLocation> { seal in
             self.locationService.fetchCurrentLocation { loc, error in
                   
@@ -106,7 +110,7 @@ class ViewModel: NSObject {
                 }
 
                 else{
-                    self.locationDidRefresh(loc,error)
+                    self.locationDidRefresh?(loc,error)
                     seal.fulfill(loc)
 
                 }
@@ -119,7 +123,8 @@ class ViewModel: NSObject {
     
     func fetchUserInfo() -> Promise <UserObjectModel>
     {
-        
+        print ("===== [fetchUserInfo] =====")
+
         let promise = Promise<UserObjectModel> { seal in
             
             if ((self.userInfoObject) != nil)
@@ -132,6 +137,8 @@ class ViewModel: NSObject {
                     if (error != nil)
                     {
                         //TO DO : setup error code
+                        seal.reject(NSError(domain: "1", code: 2, userInfo: ["reason": "Failed to retreive user info"]))
+
                     }
                     else{
                         
@@ -154,6 +161,7 @@ class ViewModel: NSObject {
     func fetchStationData() -> Promise <Any>
     {
         
+        print ("===== [fetchStationData] =====")
 
         let promise = Promise <Any> {seal in
             
@@ -218,6 +226,8 @@ class ViewModel: NSObject {
 
     func getNearestStation()
     {
+        print ("===== [getNearestStation] =====")
+
         var distance:Double  = 0.0
         var nearest = 0
          
@@ -253,7 +263,7 @@ class ViewModel: NSObject {
 extension ViewModel
 {
     
-    func validateInRangeAndWifi(station:StationObjectModel, user:UserObjectModel) -> (Bool,Bool)
+    func validateInRangeAndConnectWifi(station:StationObjectModel, user:UserObjectModel) -> (Bool,Bool)
     {
         
         let userWifiSSID = self.wifiService.getWiFiSsid()
@@ -264,7 +274,13 @@ extension ViewModel
               
         let distance =  petrolLocation.distance(from: userLocation)
               
-        return (distance <= constRadius, station.wifiSSID == userWifiSSID)
+        let inRange = distance <= constRadius
+        
+        let connectedWifi = station.wifiSSID == userWifiSSID
+
+        self.enablePump = inRange || connectedWifi
+        
+        return (inRange, connectedWifi)
 
         
                 

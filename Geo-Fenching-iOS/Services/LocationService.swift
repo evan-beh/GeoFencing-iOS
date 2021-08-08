@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-protocol LocationServiceProtocol
+public protocol LocationServiceProtocol
 {
     func setup()
     

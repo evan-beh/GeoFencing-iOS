@@ -75,20 +75,17 @@ class ViewController: UIViewController {
             
             if let nearestStation = model, let user = self.viewModel.userInfoObject
             {
-                let value  = self.viewModel.validateInRangeAndWifi(station: nearestStation, user: user as! UserObjectModel)
+                let value  = self.viewModel.validateInRangeAndConnectWifi(station: nearestStation, user: user as! UserObjectModel)
                 let proximityRange = value.0 ? "In":"NOT In"
                 let wifiRange = value.1 ? "connected" : "NOT connected"
                 let combineText = "You are \(proximityRange) Station Proximity & \(wifiRange) to Wifi"
-                             
                 self.lblAlert.text = combineText
                 
-                self.viewModel.enablePump = value.0 || value.1
             }
             else{
                 self.lblTitle.text = "NEAREST STATION - M"
                 self.lblDesc.text = "------"
                 self.lblAlert.text = "PROXIMITY ....."
-                self.viewModel.enablePump = false
             }
                               
                  

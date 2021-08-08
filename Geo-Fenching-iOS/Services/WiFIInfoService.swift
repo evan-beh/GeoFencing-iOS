@@ -8,7 +8,7 @@
 import UIKit
 import SystemConfiguration.CaptiveNetwork
 
-protocol WiFIInfoServiceProtocol
+public protocol WiFIInfoServiceProtocol
 {
     func getWiFiSsid() -> String?
 
@@ -28,7 +28,6 @@ class WiFIInfoService: WiFIInfoServiceProtocol {
         }
         return ssid
     }
-    
 }
 
 class MockWifiInfoService: WiFIInfoServiceProtocol {

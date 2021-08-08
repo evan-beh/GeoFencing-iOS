@@ -13,18 +13,14 @@
 <!--    <wpt lat="3.1289662" lon="101.6141438">-->
 <!--    <name>Jaya One</name>-->
     
-<!--    <wpt lat="3.1184089" lon="101.6332484">-->
-<!--    <name> Nearby Jaya One</name>-->
+    <wpt lat="3.1184089" lon="101.6332484">
+    <name> Nearby Jaya One</name>
     
 <!--    <wpt lat="3.1182974" lon="101.6352253">-->
 <!--    <name> Columbia</name>-->
-<!--    -->
-<!--    -->
-
     
-
-        <wpt lat="3.1869496" lon="101.4961652">
-        <name>PETRONAS Damansara Jaya 2</name>
+<!--        <wpt lat="3.1869496" lon="101.4961652">-->
+<!--        <name>PETRONAS Damansara Jaya 2</name>-->
         <!--
          Optionally provide a time element for each waypoint. Xcode will interpolate movement
          at a rate of speed based on the time elapsed between each waypoint. If you do not provide
